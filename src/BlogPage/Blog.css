@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  background: url('https://i.ibb.co/6Nhd5g9/IMG-Biodegradable-Textile.webp') no-repeat center center/cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hero-nav button {
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.hero-nav button:hover {
+  background-color: #ddd;
+}
+
+.welcome {
+  padding: 40px 20px;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.welcome-content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.welcome-image {
+  width: 40%;
+  border-radius: 10px;
+}
+
+.welcome-text {
+  width: 60%;
+}
+
+.featured {
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+}
+
+.featured-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.featured-item {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.featured-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.featured-item h3 {
+  margin-top: 15px;
+}
+
+.featured-item p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
