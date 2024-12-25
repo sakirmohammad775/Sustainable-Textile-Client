@@ -1,7 +1,6 @@
 import React from 'react';
-import Home from '../Home/Home/Home';
 import { Outlet } from 'react-router-dom';
-import Navbar from '../Component/Navbar';
+import Navbar from '../Shared/Navbar/Navbar';
 
 const Main = () => {
     return (

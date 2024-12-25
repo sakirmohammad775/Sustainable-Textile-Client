@@ -1,49 +1,33 @@
 import React from 'react';
 import SectionTitle from '../../Component/SectionTitle/SectionTitle';
+// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay, Pagination } from 'swiper';
 
+// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
 const Testimonials = () => {
     return (
         <section>
-            <SectionTitle subHeading="What Our Clients Say" heading="Testimonials" />
+            <SectionTitle subHeading="What Our Client say" heading="Testimonials"></SectionTitle>
 
             <Swiper
-                navigation={true}
-                pagination={{ clickable: true }}
-                autoplay={{ delay: 3000, disableOnInteraction: false }}
-                modules={[Navigation, Autoplay, Pagination]}
-                className="mySwiper"
-            >
-                <SwiperSlide>
-                    <div className="testimonial-slide">
-                        <p>
-                            "This service is amazing! It has completely transformed the way I work. Highly recommend!"
-                        </p>
-                        <h4>- John Doe</h4>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="testimonial-slide">
-                        <p>
-                            "Excellent customer support and a great experience overall. Five stars from me!"
-                        </p>
-                        <h4>- Jane Smith</h4>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="testimonial-slide">
-                        <p>
-                            "Their commitment to sustainability and quality is unmatched. Truly inspiring."
-                        </p>
-                        <h4>- Emily Johnson</h4>
-                    </div>
-                </SwiperSlide>
-            </Swiper>
+        navigation={true}
+        modules={[ Navigation]}
+        className="mySwiper"
+      >
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide>Slide 7</SwiperSlide>
+        <SwiperSlide>Slide 8</SwiperSlide>
+        <SwiperSlide>Slide 9</SwiperSlide>
+      </Swiper>
+
         </section>
     );
 };

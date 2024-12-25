@@ -13,7 +13,7 @@ const Home = () => {
        {/* <Swiper></Swiper> */}
        <PopularItem></PopularItem>
        <FeaturedItem></FeaturedItem>
-       <Testimonials></Testimonials>
+       {/* <Testimonials></Testimonials> */}
         </>
     );
 };
