@@ -3,6 +3,7 @@ import React from 'react';
 import HeroSection from '../Hero/HeroSection';
 import PopularItem from '../PopularItem/PopularItem';
 import FeaturedItem from './FeaturedItem/FeaturedItem';
+import Testimonials from '../Testimonials/Testimonials';
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
        {/* <Swiper></Swiper> */}
        <PopularItem></PopularItem>
        <FeaturedItem></FeaturedItem>
+       <Testimonials></Testimonials>
         </>
     );
 };
