@@ -1,6 +1,7 @@
 import React from 'react';
 import Item from '../../Shared/Item/Item';
 import Cover from '../../Shared/Cover/Cover';
+import { Link } from 'react-router-dom';
 
 const ProductsCategory = ({ items, title, coverImg }) => {
     return (
@@ -15,6 +16,10 @@ const ProductsCategory = ({ items, title, coverImg }) => {
                         </Item>)
                     }
                 </div>
+                <Link to={`/order/${title}`}>
+                
+                <button className='btn btn-outline border-0 border-b-4 mt-4'>Order Now</button>
+                </Link>
             </div>
         </>
     );
