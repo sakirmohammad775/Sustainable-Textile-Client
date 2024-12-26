@@ -3,16 +3,16 @@
     "id": "1",
     "image": "https://i.ibb.co/6Nhd5g9/IMG-Biodegradable-Textile.webp",
     "name": "Organic Cotton Fabric",
-    "category": "Popular",
+    "category": "Cotton",
     "price": 15.99,
     "description": "Soft, breathable fabric made from 100% organic cotton, perfect for eco-friendly apparel.",
     "title": "Eco-Friendly Organic Cotton"
   },
   {
     "id": "2",
-    "image": "https://i.ibb.co/6Nhd5g9/IMG-Biodegradable-Textile.webp",
+    "image": "https://i.ibb.co.com/xLPb8Q4/1-W34-Lpsd-Ob7-Tb-Oy-Kcto-Sm6w.jpg",
     "name": "Recycled Polyester Fabric",
-    "category": "Synthetic Fiber",
+    "category": "Polyester",
     "price": 12.49,
     "description": "Durable fabric made from recycled plastic bottles, reducing landfill waste.",
     "title": "Sustainable Recycled Polyester"
@@ -21,7 +21,7 @@
     "id": "3",
     "image": "https://i.ibb.co/6Nhd5g9/IMG-Biodegradable-Textile.webp",
     "name": "Bamboo Fiber Fabric",
-    "category": "Natural Fiber",
+    "category": "Cotton",
     "price": 18.99,
     "description": "Eco-friendly bamboo fabric that is soft, antibacterial, and biodegradable.",
     "title": "Soft Bamboo Fabric"
@@ -39,7 +39,7 @@
     "id": "5",
     "image": "https://i.ibb.co/6Nhd5g9/IMG-Biodegradable-Textile.webp",
     "name": "Linen Fabric",
-    "category": "Natural Fiber",
+    "category": "Cotton",
     "price": 22.49,
     "description": "Lightweight and breathable fabric made from flax plants, ideal for warm weather.",
     "title": "Breathable Linen Fabric"
@@ -48,7 +48,7 @@
     "id": "6",
     "image": "https://i.ibb.co/6Nhd5g9/IMG-Biodegradable-Textile.webp",
     "name": "Tencel Fabric",
-    "category": "Popular",
+    "category": "Nylon",
     "price": 16.99,
     "description": "Eco-friendly fabric made from sustainably sourced wood pulp with a smooth texture.",
     "title": "Eco-Luxury Tencel"
@@ -57,7 +57,7 @@
     "id": "7",
     "image": "https://i.ibb.co/6Nhd5g9/IMG-Biodegradable-Textile.webp",
     "name": "Recycled Denim Fabric",
-    "category": "Recycled Material",
+    "category": "Denim",
     "price": 25.99,
     "description": "High-quality denim made from recycled fibers, reducing textile waste.",
     "title": "Recycled Sustainable Denim"
@@ -66,7 +66,7 @@
     "id": "8",
     "image": "https://i.ibb.co/6Nhd5g9/IMG-Biodegradable-Textile.webp",
     "name": "Silk-like Lyocell",
-    "category": "Regenerated Fiber",
+    "category": "Nylon",
     "price": 24.99,
     "description": "A luxurious, biodegradable fabric with a silky texture, made from wood cellulose.",
     "title": "Silk-like Sustainable Lyocell"
@@ -75,7 +75,7 @@
     "id": "9",
     "image": "https://i.ibb.co/6Nhd5g9/IMG-Biodegradable-Textile.webp",
     "name": "Cork Fabric",
-    "category": "Natural Fiber",
+    "category": "Popular",
     "price": 30.00,
     "description": "Eco-friendly fabric made from cork oak trees, ideal for accessories and fashion.",
     "title": "Sustainable Cork Fabric"
@@ -84,9 +84,36 @@
     "id": "10",
     "image": "https://i.ibb.co/6Nhd5g9/IMG-Biodegradable-Textile.webp",
     "name": "Piñatex Fabric",
-    "category": "Regenerated Fiber",
+    "category": "Nylon",
     "price": 35.49,
     "description": "Innovative fabric made from pineapple leaf fibers, a sustainable leather alternative.",
     "title": "Innovative Piñatex Fabric"
+  },
+  {
+    "id": "11",
+    "image": "https://i.ibb.co/6Nhd5g9/IMG-Biodegradable-Textile.webp",
+    "name": "Wool Blend Fabric",
+    "category": "Popular",
+    "price": 18.49,
+    "description": "Soft and warm fabric, ideal for cold weather clothing.",
+    "title": "Cozy Wool Blend"
+  },
+  {
+    "id": "12",
+    "image": "https://i.ibb.co/6Nhd5g9/IMG-Biodegradable-Textile.webp",
+    "name": "Eco Wool",
+    "category": "Cotton",
+    "price": 22.59,
+    "description": "Wool eco designed and eco impact optimized.",
+    "title": "Eco Design Wool"
+  },
+  {
+    "id": "13",
+    "image": "https://i.ibb.co.com/xLPb8Q4/1-W34-Lpsd-Ob7-Tb-Oy-Kcto-Sm6w.jpg",
+    "name": "Stretchable Poly ",
+    "category": "Polyester",
+    "price": 19.95,
+    "description": "Polyester, stretchy durable good fashion textiles ",
+    "title": "Dynamic Poly "
   }
 ]
