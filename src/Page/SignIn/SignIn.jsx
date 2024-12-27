@@ -1,9 +1,25 @@
 
+import { useContext } from 'react';
 import img1 from '../../assets/360_F_491473567_gIr3ndIFtW2Cd5GD5UnG0tNXVgK7g25J.jpg'
 import { FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AuthContext } from '../../Providers/AuthProvider';
 
 const SignIn = () => {
+    const {signIn}=useContext(AuthContext)
+
+    const handleLogin=event=>{
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email,password);
+        signIn(email,password)
+        .then(result=>{
+            const user=result.user;
+            console.log(user);
+        })
+    }
 
        
 
@@ -17,7 +33,7 @@ const SignIn = () => {
                         <p className="py-6">Explore Our page</p>
                     </div>
                     <div className="card  w-full max-w-lg bg-transparent">
-                        <form className="card-body">
+                        <form onSubmit={handleLogin} className="card-body">
 
                             <div className="form-control">
                                 <label className="label">
@@ -47,7 +63,7 @@ const SignIn = () => {
                         {/* {error && <p className="text-red-500 text-sm mb-4">{error}</p>} */}
 
 
-                        <p className="text-center">Already have an account? <Link to="/signUp">Sign In</Link></p>
+                        <p className="text-center">New Here? Create a new Account-- <Link to="/signUp">Sign Up</Link></p>
 
                         {/*another login process*/}
                         <div className="flex my-5 justify-center gap-6">

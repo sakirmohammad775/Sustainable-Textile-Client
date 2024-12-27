@@ -8,6 +8,7 @@ import BlogPage from "../BlogPage/BlogPage";
 import ContactUs from "../ContactUs/ContactUs";
 import Order from "../Order/Order";
 import SignIn from "../Page/SignIn/SignIn";
+import SignUp from "../Page/SignUp/SignUp";
   export const router = createBrowserRouter([
     {
       path: "/",
@@ -37,6 +38,10 @@ import SignIn from "../Page/SignIn/SignIn";
         {
           path:'/signIn',
           element:<SignIn></SignIn>
+        },
+        {
+          path:'/signUp',
+          element:<SignUp></SignUp>
         }
       ]
     },

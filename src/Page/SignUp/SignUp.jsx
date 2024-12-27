@@ -1,8 +1,10 @@
 import { useContext } from "react";
-import { AuthContext } from "../../Provider/AuthProvider";
+import { AuthContext } from "../../Providers/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 import { FaFacebook, FaGoogle } from "react-icons/fa";
+import { useForm } from "react-hook-form";
 
+const {register,handleSubmit,watch,formState: { errors }} = useForm()
 
 const SignUp = () => {
     const { createUser } = useContext(AuthContext)
@@ -10,7 +12,7 @@ const SignUp = () => {
 
     // const backgroundImageStyle = {
     //     backgroundImage: `url(${signUpImage})`,
-    //     backgroundSize: 'cover', // Cover the entire div
+    //     backgroundSize: 'cover', // Cover the enti fre div
     //     backgroundPosition: 'center', // Center the image
     //     backgroundRepeat: 'no-repeat', // Do not repeat the image
     // };
