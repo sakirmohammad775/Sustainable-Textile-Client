@@ -1,12 +1,15 @@
 
 import { useContext } from 'react';
 import img1 from '../../assets/pngtree-aesthetic-white-paper-texture-background-with-ample-space-for-design-elements-image_13863010.png'
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from '../../Providers/AuthProvider';
 import { Helmet } from 'react-helmet-async';
+import Swal from 'sweetalert2';
 
 const SignIn = () => {
     const { signIn } = useContext(AuthContext)
+    const navigate=useNavigate()
+    const location =useLocation()
 
     const handleLogin = event => {
         event.preventDefault();
@@ -18,6 +21,14 @@ const SignIn = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "SuccessFully Login",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+                  navigate('/')
             })
     }
 
