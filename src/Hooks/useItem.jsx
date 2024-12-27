@@ -5,7 +5,7 @@ const useItem=()=>{
  const [item, setItem] = useState([])
  const [loading,setLoading]=useState(true) //   loading state
     useEffect(() => { // 
-        fetch('item.json') // fetch data from json file
+        fetch('http://localhost:5000/item') // fetch data from json file
             .then(res => res.json()) // convert data to json
             .then(data => {
             

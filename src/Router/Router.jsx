@@ -7,6 +7,7 @@ import OurProducts from "../OurProducts/OurProducts";
 import BlogPage from "../BlogPage/BlogPage";
 import ContactUs from "../ContactUs/ContactUs";
 import Order from "../Order/Order";
+import SignIn from "../Page/SignIn/SignIn";
   export const router = createBrowserRouter([
     {
       path: "/",
@@ -30,8 +31,12 @@ import Order from "../Order/Order";
           element:<ContactUs></ContactUs>
         },
         {
-          path: '/order/:category',
+          path: 'order/:category',
           element: <Order></Order>
+        },
+        {
+          path:'/signIn',
+          element:<SignIn></SignIn>
         }
       ]
     },

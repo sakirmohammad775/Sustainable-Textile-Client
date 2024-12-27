@@ -1,36 +1,36 @@
 [
     {
-      "_id": "1",
+    
       "name": "Eco Denim",
       "rating": 4.8,
       "details": "Sustainable denim made from organic cotton and recycled materials."
     },
     {
-      "_id": "2",
+    
       "name": "Organic Cotton",
       "rating": 4.6,
       "details": "100% organic cotton fabric, free from harmful pesticides and chemicals."
     },
     {
-      "_id": "3",
+    
       "name": "Bamboo Fabric",
       "rating": 4.7,
       "details": "Eco-friendly fabric made from bamboo fibers, offering breathability and softness."
     },
     {
-      "_id": "4",
+    
       "name": "Recycled Polyester",
       "rating": 4.5,
       "details": "Fabric created from recycled plastic bottles, reducing environmental waste."
     },
     {
-      "_id": "5",
+      
       "name": "Hemp Fabric",
       "rating": 4.9,
       "details": "Durable and sustainable fabric made from hemp plants, requiring minimal water."
     },
     {
-      "_id": "6",
+      
       "name": "Tencel Lyocell",
       "rating": 4.8,
       "details": "Soft and sustainable fabric made from sustainably sourced wood pulp."
