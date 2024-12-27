@@ -5,10 +5,11 @@ import { FaFacebook, FaGoogle } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { Helmet } from "react-helmet-async";
 import img1 from "../../assets/pngtree-aesthetic-white-paper-texture-background-with-ample-space-for-design-elements-image_13863010.png"
+import Swal from "sweetalert2";
 
 const SignUp = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm()
-    const { createUser } = useContext(AuthContext)
+    const { register, handleSubmit, reset, formState: { errors } } = useForm()
+    const { createUser, updateUserProfile } = useContext(AuthContext)
     const navigate = useNavigate()
 
     // const backgroundImageStyle = {
@@ -23,7 +24,20 @@ const SignUp = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
-                navigate('/')
+                updateUserProfile(data.name, data.photoURL)
+                    .then(() => {
+                        console.log('user profile info updated')
+                        reset()
+                        Swal.fire({
+                            position: "top-end",
+                            icon: "success",
+                            title: "SuccessFully SignUp",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        navigate('/')
+                    })
+                    .catch(error => console.log(error))
             })
     }
     return (
@@ -31,7 +45,7 @@ const SignUp = () => {
             <Helmet>
                 <title>Sustainable| Sign In</title>
             </Helmet>
-            <div className="hero min-h-screen pt-40 mb-40"  style={{ backgroundImage: `url("${img1}")` }}>
+            <div className="hero min-h-screen pt-40 mb-40" style={{ backgroundImage: `url("${img1}")` }}>
                 <div className="hero-content flex-col text-black">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">SignUp</h1>
@@ -51,7 +65,7 @@ const SignUp = () => {
                                     <span className="font-bold">Photo URL</span>
                                 </label>
                                 <input {...register("photoURL")} type="text" placeholder="Photo URL" name="name" className="input input-bordered bg-transparent  " />
-                                
+
                             </div>
                             <div className="form-control">
                                 <label className="label">
