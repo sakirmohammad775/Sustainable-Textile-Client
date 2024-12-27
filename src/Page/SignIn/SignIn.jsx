@@ -11,6 +11,8 @@ const SignIn = () => {
     const navigate=useNavigate()
     const location =useLocation()
 
+    const from =location.state?.from?.pathname || "/"
+
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
@@ -28,7 +30,7 @@ const SignIn = () => {
                     showConfirmButton: false,
                     timer: 1500
                   });
-                  navigate('/')
+                  navigate(from,{replace:true})
             })
     }
 

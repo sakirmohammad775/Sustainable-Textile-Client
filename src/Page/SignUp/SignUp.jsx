@@ -31,7 +31,7 @@ const SignUp = () => {
             <Helmet>
                 <title>Sustainable| Sign In</title>
             </Helmet>
-            <div className="hero min-h-screen"  style={{ backgroundImage: `url("${img1}")` }}>
+            <div className="hero min-h-screen pt-40 mb-40"  style={{ backgroundImage: `url("${img1}")` }}>
                 <div className="hero-content flex-col text-black">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">SignUp</h1>
@@ -45,6 +45,13 @@ const SignUp = () => {
                                 </label>
                                 <input {...register("name")} type="name" placeholder="name" name="name" className="input input-bordered bg-transparent  " />
                                 {errors.name && <span className="text-red-600">Name field is required </span>}
+                            </div>
+                            <div className="form-control w-96">
+                                <label className="label">
+                                    <span className="font-bold">Photo URL</span>
+                                </label>
+                                <input {...register("photoURL")} type="text" placeholder="Photo URL" name="name" className="input input-bordered bg-transparent  " />
+                                
                             </div>
                             <div className="form-control">
                                 <label className="label">
@@ -66,6 +73,7 @@ const SignUp = () => {
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
+
                             <div className="form-control mt-3">
                                 <button type="submit" className="btn  bg-transparent">SignUp</button>
                             </div>
