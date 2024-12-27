@@ -3,10 +3,11 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 import { FaFacebook, FaGoogle } from "react-icons/fa";
 import { useForm } from "react-hook-form";
-
-const {register,handleSubmit,watch,formState: { errors }} = useForm()
+import { Helmet } from "react-helmet-async";
+import img1 from "../../assets/pngtree-aesthetic-white-paper-texture-background-with-ample-space-for-design-elements-image_13863010.png"
 
 const SignUp = () => {
+    const { register, handleSubmit, watch, formState: { errors } } = useForm()
     const { createUser } = useContext(AuthContext)
     const navigate = useNavigate()
 
@@ -17,45 +18,39 @@ const SignUp = () => {
     //     backgroundRepeat: 'no-repeat', // Do not repeat the image
     // };
 
-    const handleSignUp = e => {
-        e.preventDefault()
-        const form = e.target
-        const name = form.name.value
-        const email = form.email.value
-        const password = form.password.value
-        console.log(name, email, password);
-
-        //authentication from authContext
-        createUser(email, password)
+    const onSubmit = data => {
+        createUser(data.email, data.password)
             .then(result => {
-                const user = result.user
-                console.log(user); //for testing
+                const loggedUser = result.user;
+                console.log(loggedUser)
                 navigate('/')
             })
-            .catch(error => console.log(error))
     }
     return (
         <>
-
-            <div className="hero min-h-screen">
-                <div className="hero-content flex-col ">
+            <Helmet>
+                <title>Sustainable| Sign In</title>
+            </Helmet>
+            <div className="hero min-h-screen"  style={{ backgroundImage: `url("${img1}")` }}>
+                <div className="hero-content flex-col text-black">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">SignUp</h1>
                         <p className="py-6">Explore Our page</p>
                     </div>
                     <div className="card  w-full max-w-lg bg-transparent">
-                        <form onSubmit={handleSignUp} className="card-body">
+                        <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                             <div className="form-control w-96">
                                 <label className="label">
                                     <span className="font-bold">Name</span>
                                 </label>
-                                <input type="name" placeholder="name" name="name" className="input input-bordered bg-transparent  " required />
+                                <input {...register("name")} type="name" placeholder="name" name="name" className="input input-bordered bg-transparent  " />
+                                {errors.name && <span className="text-red-600">Name field is required </span>}
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="font-bold">Email</span>
                                 </label>
-                                <input type="email" placeholder="email"
+                                <input {...register("email", { required: true })} type="email" placeholder="email"
                                     name="email"
                                     className="input input-bordered bg-transparent" required />
                             </div>
@@ -63,7 +58,7 @@ const SignUp = () => {
                                 <label className="label">
                                     <span className="font-bold">Password</span>
                                 </label>
-                                <input type="password"
+                                <input {...register("password")} type="password"
                                     name="password"
                                     placeholder="password"
                                     className="input input-bordered bg-transparent" required />
@@ -89,6 +84,7 @@ const SignUp = () => {
                     </div>
                 </div>
             </div>
+
         </>
     );
 };

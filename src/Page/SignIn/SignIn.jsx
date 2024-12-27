@@ -1,33 +1,36 @@
 
 import { useContext } from 'react';
-import img1 from '../../assets/360_F_491473567_gIr3ndIFtW2Cd5GD5UnG0tNXVgK7g25J.jpg'
-import { FaGoogle } from "react-icons/fa";
+import img1 from '../../assets/pngtree-aesthetic-white-paper-texture-background-with-ample-space-for-design-elements-image_13863010.png'
 import { Link } from "react-router-dom";
 import { AuthContext } from '../../Providers/AuthProvider';
+import { Helmet } from 'react-helmet-async';
 
 const SignIn = () => {
-    const {signIn}=useContext(AuthContext)
+    const { signIn } = useContext(AuthContext)
 
-    const handleLogin=event=>{
+    const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email,password);
-        signIn(email,password)
-        .then(result=>{
-            const user=result.user;
-            console.log(user);
-        })
+        console.log(email, password);
+        signIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
     }
 
-       
+
 
 
     return (
         <>
-            <div className="hero min-h-screen" style={{backgroundImage:`url("${img1}")`}}>
-                <div className="hero-content flex-col ">
+            <Helmet>
+                <title>Sustainable| Sign In</title>
+            </Helmet>
+            <div className="hero min-h-screen " style={{ backgroundImage: `url("${img1}")` }}>
+                <div className="hero-content text-black flex-col ">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">SignIn</h1>
                         <p className="py-6">Explore Our page</p>
@@ -69,11 +72,12 @@ const SignIn = () => {
                         <div className="flex my-5 justify-center gap-6">
 
                             {/* <button className="pt-2"onClick={handleGoogleSignIn}><FaGoogle/></button> */}
-                        
+
                         </div>
                     </div>
                 </div>
             </div>
+
         </>
     );
 };
