@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 import Swal from 'sweetalert2';
+import { CiShoppingCart } from 'react-icons/ci';
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext)
@@ -25,6 +26,12 @@ const Navbar = () => {
       <li><Link to="/blogPage">Blogs</Link></li>
       <li><Link to="/order/nylon">Order</Link></li>
       <li><Link to="/contactUs">Contact Us</Link></li>
+      <li><Link to="/">
+        <button className="btn">
+          <CiShoppingCart />
+          <div className="badge badge-secondary">0</div>
+        </button>
+      </Link></li>
     </>
 
   return (
