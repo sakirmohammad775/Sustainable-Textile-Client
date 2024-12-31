@@ -8,5 +8,5 @@ const useAxiosSecure = () => {
     return axiosSecure
 
 }
-//bbe9ijdvksld
+
 export default useAxiosSecure;
