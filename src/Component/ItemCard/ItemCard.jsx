@@ -1,12 +1,14 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
 
 const ItemCard = ({ item }) => {
     const {_id, name, image, price, description } = item;
     const { user } = useAuth()
     const navigate = useNavigate()
     const location =useLocation()
+    const axiosSecure=useAxiosSecure()
     const handleAddToCart = item => {
         if (user && user.email) {
             //TODO :send cart item to the database
@@ -18,7 +20,22 @@ const ItemCard = ({ item }) => {
                     image,
                     price, 
             }
-            Axios.post
+            axiosSecure.post('/carts', cartItem)
+            .then((res) => {
+                console.log('Response:', res.data);
+                Swal.fire({
+                    title: `${name} added to your cart`,
+                    icon: 'success',
+                });
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                Swal.fire({
+                    title: 'Failed to add item!',
+                    text: error.response?.data?.message || 'Unknown error occurred',
+                    icon: 'error',
+                });
+            });
         }
         else {
             Swal.fire({
@@ -37,7 +54,7 @@ const ItemCard = ({ item }) => {
                 }
             });
         }
-        console.log(itemCart)
+        console.log(item)
     }
 
     return (
